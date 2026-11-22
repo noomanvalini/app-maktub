@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #0D1117;
+    color: #FFFFFF;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism utilities with Dark Olive & Matte Black tint */
+  .glass-olive {
+    background: linear-gradient(
+      145deg,
+      rgba(35, 49, 40, 0.72) 0%,
+      rgba(20, 29, 24, 0.84) 55%,
+      rgba(13, 17, 23, 0.92) 100%
+    );
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-panel {
+    background: rgba(19, 24, 32, 0.78);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Radial light points to highlight the active card on top of the stack */
+  .radial-card-spotlight {
+    background:
+      radial-gradient(circle at 82% 14%, rgba(59, 130, 246, 0.28) 0%, transparent 45%),
+      radial-gradient(circle at 18% 85%, rgba(76, 107, 87, 0.42) 0%, transparent 55%),
+      radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.12) 0%, transparent 40%);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
